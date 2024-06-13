@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>eCommerce</title>
+
+	<script>
+	
+		function validations(){
+			var userPwd = document.getElementById("userpwd").value;
+			if(userPwd.length >= 8 && userPwd.length <=16){
+				document.getElementById("loginform").submit();			
+			}else{
+				alert("Please enter the password in between 8 to 16 characters");
+			}			
+		}
+	
+	</script>
+
+</head>
+<body>
+	<div>
+		<a href=".">Home</a> |
+		<a href="#">About Us</a> |
+		<a href="#">Contact Us</a> |		
+	</div>
+	<br>
+	<div style="float:right">		
+		<a href="Register.html">Register</a> |		
+	</div>
+	<hr>
+	<div style="text-align: center;">
+		<form id="loginform" action="./Login" method="post">
+			<label>Email:</label>
+			<input type="email" id="emailid" name="emailid"
+			 placeholder="Enter your username" required="required"/> <br><br>
+			<label>Password:</label>
+			<input type="password" id="userpwd" name="userpwd" min="8" max="16"
+			 placeholder="Enter your password" required="required"/> <br><br>
+			<button id="login" type="button" onclick="validations()"> Login </button>
+		</form>
+		
+	</div>
+	<hr>
+	<div style="text-align: center;">		
+		Copyrights @DAC 2024			
+	</div>
+</body>
+</html>

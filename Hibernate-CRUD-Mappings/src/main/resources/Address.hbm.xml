@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="in.cdac.Address" table="shippingaddress">
+	 <id name="addressID" column="id" type="int">
+	 	<generator class="identity"></generator>
+	 </id>
+	 <property name="street" type="string"></property>
+	 <property name="locality" type="string"></property>
+	 <property name="state" type="string" not-null="true"></property>
+	 <property name="city" type="string" not-null="true"></property>
+	 <property name="pincode" type="int" not-null="true"></property>
+ </class>
+</hibernate-mapping>

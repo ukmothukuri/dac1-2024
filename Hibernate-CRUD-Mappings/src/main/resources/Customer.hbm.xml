@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="in.cdac.Customer" table="customer">
+	 <id name="email" column="email" type="string">
+	 </id>
+	 <property name="name" type="string"></property>
+	 <property name="address" type="string"></property>
+	 <property name="mobile" type="string" not-null="true"></property>
+	 
+	 <one-to-one name="customerLogin" class="in.cdac.CustomerLogin" cascade="all"></one-to-one>
+	 	 
+	 <list name="shippingAddress" cascade="all" lazy="false">
+	 	<key column="shipid"></key>	
+	 	<index column="type"></index>
+	 	<one-to-many class="in.cdac.Address"/>
+	 </list>
+ </class>
+</hibernate-mapping>

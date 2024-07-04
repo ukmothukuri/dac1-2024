@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="in.cdac.Product" table="product">
+	<id column="productId" name="productId" type="int"/>
+	<property column="productName" name="productName" type="string"></property>
+	<property column="productPrice" name="productPrice" type="double"></property>
+	<property column="productCategory" name="productCategory" type="string"></property>
+</class>
+</hibernate-mapping>
